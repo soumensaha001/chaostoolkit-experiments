@@ -22,10 +22,10 @@ def print_hi(name):
         print(servicelistroot)
         for s in servicelistroot['serviceList']:
             print(s['name'])
-            with open(r'test.yaml') as file:
-                documents = yaml.full_load(file)
-                for item, doc in documents.items():
-                    print(item, ":", doc)
+#            with open(r'test.yaml') as file:
+#                documents = yaml.full_load(file)
+#                for item, doc in documents.items():
+#                    print(item, ":", doc)
             dict_file = {'version': '1.0.0',
                          'title': 'What happens if we terminate a Pod?',
                          'description': 'If a Pod is terminated, a new one should be created in its places',
