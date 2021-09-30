@@ -43,6 +43,7 @@ def print_hi(name):
                 documents = yaml.dump(dict_file, file)
             #uncomment this in production
             #os.system('chaos run '+'probe-for-' + s['name'] + '.yaml')
+    os.system('chaos run terminate-pod.yaml')
     os.system('chaos run probe-for-payment.yaml')
     os.system('chaos run probe-for-productpage.yaml')
     os.system('chaos run probe-for-ratings.yaml')
