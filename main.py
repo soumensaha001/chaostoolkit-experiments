@@ -4,6 +4,7 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import requests
 import json
+import os
 import yaml
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -40,6 +41,11 @@ def print_hi(name):
                      }
             with open(r'probe-for-' + s['name'] + '.yaml', 'w') as file:
                 documents = yaml.dump(dict_file, file)
+            #uncomment this in production
+            #os.system('chaos run '+'probe-for-' + s['name'] + '.yaml')
+    os.system('chaos run probe-for-payment.yaml')
+    os.system('chaos run probe-for-productpage.yaml')
+    os.system('chaos run probe-for-ratings.yaml')
 
 
 # Press the green button in the gutter to run the script.
